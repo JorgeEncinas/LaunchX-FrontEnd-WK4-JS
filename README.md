@@ -10,3 +10,5 @@ the bonus stuff I originally wanted to, sadly.
 
 For the upload, I removed a lot of the bonus stuff that was in progress,
 and I also will not include the image I was using, as it's not mine
+
+[Screenshot](./screenshots/img1.png)
