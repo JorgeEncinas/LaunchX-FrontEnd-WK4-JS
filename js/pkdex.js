@@ -21,7 +21,7 @@ const displaySprite = (spriteURL) => {
 const fetchPokemon = (pkmnName) => {
     let url; 
     if (typeof(pkmnName) == "string") {
-        url = 'https://pokeapi.co/api/v2/pokemon/'+pkmnName.toLowerCase(); //You could also use backticks and ${} 
+        url = 'https://pokeapi.co/api/v2/pokemon/'+ pkmnName.toLowerCase(); //You could also use backticks and ${} 
     } else if(Number.isInteger(pkmnName)) {
         url = 'https://pokeapi.co/api/v2/pokemon/'+ Math.abs(pkmnName) //You could also use backticks and ${} 
     } else {
