@@ -1,0 +1,360 @@
+.clearfix {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/*Solution given in Stack Overflow by Zenon and Liam, link:
+https://stackoverflow.com/a/1828940 */
+.margin-collapse-separator {
+    overflow: hidden;
+    height: 0px;
+    width: 0px;
+}
+
+button {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5% 8%;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    /*background: rgb(70,70,70);
+    background: linear-gradient(0deg, rgba(70,70,70,1) 23%, rgba(0,0,0,1) 100%); */
+    /*background: rgb(70,70,70);
+    background: linear-gradient(0deg, rgba(70,70,70,1) 5%, rgba(0,0,0,1) 79%); */
+    background: rgb(255,169,251);
+    background: linear-gradient(0deg, rgba(255,169,251,1) 0%, rgba(255,205,255,1) 100%);
+    background-attachment: fixed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/********************************  HEADER ELEMENTS *************************************************/
+/***************************************************************************************************/
+
+header {
+    width: 98%;
+    height: 15%;
+    margin: auto;
+    background-color:black;
+    position: relative;
+}
+
+.logo-img {
+    height: 80%;
+    margin-left: 2%;
+    margin-top: 1%;
+    position: relative;
+    font-size: 10vw;
+}
+
+.header-content-center{
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    top: 0; bottom: 0; left: 1%; right: 0;
+}
+
+.title {
+    height: 50%;
+    font-size: 50%;
+    margin: auto;
+    top: 0; bottom: 0; left: 11%; right: 0;
+    position:absolute;
+}
+
+.header-elm {
+    float:left;
+}
+
+.gradient-font {
+    font-size: 54px;
+    background: -webkit-linear-gradient(#5d83ff, #ff3582);
+    /*background: linear-gradient(to right, #5d83ff, #ff3582); */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-background-clip: text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+
+/********************************  INNER BODY ELEMENTS *********************************************/
+/***************************************************************************************************/
+
+.inner-body {
+    width: 95%;
+    height: auto;
+    margin: 20px 2.5%;
+    background-color: white;
+    padding: 5px 0;
+    border-radius: 8px;
+}
+
+/********* DATA INPUT SECTION ************/
+
+.flex-inner-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-cont-ib {
+    display: flex;
+}
+
+.data-input {
+    width: 21%;
+    padding: 1% 2%;
+    margin: 1% 1% 1% 2%;
+    background-color:#ff3582;
+    border-radius: 8px;
+}
+
+.data-input-params {
+    width: 100%;
+    height: 80%;
+}
+
+.di-paramspec {
+    margin: 10px 0;
+    height: 20%;
+}
+
+.di-btn-area {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 20%;
+    margin: 10% auto;
+}
+
+.di-btn-area  button{
+    height: 80%;
+}
+
+.data-input-arrows {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.data-input-arrows button {
+    width: 40%;
+    height: 95%;
+    font-size: 2vw;
+    padding: 0px;
+    margin: 1% 1% 0 1%;
+}
+
+.data-input-params h4 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.pkmn-txtinp {
+    width: 50%;
+    margin: 10px auto 0 auto;
+    display: block;
+}
+
+/********* Pokemon Display (Center) Section **********/
+
+.pkmn-display {
+    width: 46%;
+    /* height: 100%; */
+    /*padding: 1% 2%; */
+    margin: 1% 1%;
+    border-radius: 8px;
+    /*background-color: red; /*using to see the problem*/
+    overflow: hidden; /*To make border-radius work on children*/
+}
+
+.pkmn-title {
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 0.5% 0;
+    overflow: hidden;
+    height: 18%;
+}
+
+.pkmn-display-inner {
+    background: rgb(93,131,255);
+    background: linear-gradient(180deg, rgba(93,131,255,1) 0%, rgba(255,53,130,1) 100%);
+    height: 80%;
+}
+
+.pkmn-name {
+    float: left;
+    width: 48%;
+    height: 100%;
+    margin-left: 2%;
+    background: black;
+}
+
+.pkmn-type {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: auto 2%;
+    width: 48%;
+    background: black;
+    transform:translateY(20%); /*temporary solution */
+}
+
+.pkmn-sprite-arrows {
+    width: 100%;
+    height: 48%;
+    display: flex;
+    justify-content: center;
+}
+
+.pkmn-arrow {
+    width: 24%;
+    height: 100%;
+    margin: auto;
+}
+
+.pkmn-arrow button {
+    width: 80%;
+    height: 50%;
+    padding: 20% 10%;
+    font-size: 30px;
+    margin: 25% 5%;
+}
+
+.pkmn-sprite-area {
+    width: 48%;
+    height: 100%;
+    margin: auto;
+}
+
+.pkmn-img {
+    width: 50%;
+    margin: auto 25%;
+}
+
+.pkmn-genshi-params {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    height: 48%;
+    width: 100%;
+}
+
+.pkmn-genshi-params div, .pkmn-genshi-params button {
+    margin: 10% 10px;
+}
+
+/*  .type-space p */
+
+/************ STATS SECTION (Right) ************/
+
+.stats-area {
+    width: 21%;
+    padding: 2% 2%;
+    margin: 1% 2% 1% 1%;
+    background-color:#3b96ff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat-box {
+    width: 40%;
+    height: 26%;
+    margin: 8px;
+    background-color: white;
+    border-radius: 8px;
+    overflow:hidden;
+}
+
+.sb-title {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sb-number {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    text-align: center;
+}
+
+/************ MOVES SECTION (Bottom) ************/
+
+.moves-area {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    margin: 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(131,74,250);
+    background: linear-gradient(0deg, rgba(131,74,250,1) 0%, rgba(169,127,255,1) 100%);
+}
+
+.move-box {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(57,57,57,1) 100%);
+    color: white;
+    text-align:center;
+    width: 23%;
+    height: 75px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/********************************  FOOTER ELEMENTS *********************************************/
+/***************************************************************************************************/
+
+/********************************** RESPONSIVENESS *********************************************/
+
+@media only screen and (max-width: 1000px) {
+    .data-input {
+        min-width: 90%;
+        max-width: 100%;
+    }
+
+    .pkmn-display {
+        min-width: 90%;
+        max-width: 100%;
+    }
+
+    .stats-area {
+        min-width: 90%;
+        max-width: 100%;
+    }
+
+    .flex-inner-body {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchDex</title>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link id="pkmn-tab-icon" rel="icon" href="./img/pkball.webp">
+</head>
+<body>
+    <header>
+        <div class="header-content-center">
+            <a href="index.html"><img class="logo-img header-elm" src="./img/pkball.webp"></a>
+            <h1 class="gradient-font title header-elm">LaunchDex</h1>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <div class="inner-body">
+        <div class="margin-collapse-separator">.</div>
+        <div class="flex-inner-body">
+            <div class="data-input inner-body-tri">
+                <div class="data-input-params">
+                    <h4 id="data-input-instruction">Introduzca el nombre del pokemon</h4>
+                    <input type="text" placeholder="pikachu" id="pkmn-input-field" name="pkmn-input-field" class="pkmn-txtinp"> <br>
+                    <div id="di-paramspec" class="di-paramspec">
+                        <input onchange='changeURL("pokemon")' type="radio" name="search-type" value="1" checked><label>Pokémon - Nombre o #</label> <br>
+                        <input onchange='changeURL("type")' type="radio" name="search-type" value="2"><label>Tipo</label> <br>
+                        <input osel-prev-pkmnnchange='changeURL("ability")' type="radio" name="search-type" value="3"><label>Habilidad</label> <br> 
+                        <input onchange='changeURL("offset")' type="radio" name="search-type" value="4"><label>Selección Numérica</label> <br>
+                    </div>
+                    <div class="di-btn-area">
+                        <button onclick="fetchPokemon(getPkmnText())">Buscar</button>
+                    </div>
+                </div>
+                <div class="data-input-arrows">
+                    <button id="sel-prev-pkmn" onclick="" class="arrow-btn">🢀</button>
+                    <button id="sel-next-pkmn" onclick="" class="arrow-btn">🢂</button>
+                </div>
+            </div>
+            <div class="margin-collapse-separator">.</div>
+            <div class="pkmn-display">
+                <div class="pkmn-title">
+                    <div>
+                        <h2 id="pkmn-name" class="pkmn-name">Pokemon Name</h2>
+                        <div id="pkmn-type" class="pkmn-type"><p id="pkmn-type-text">Normal</p></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="pkmn-display-inner">
+                    <div class="pkmn-sprite-arrows">
+                        <div class="pkmn-arrow">
+                            <button onclick="changeSprite('left')">🢀</button>
+                        </div>
+                        <div class="pkmn-sprite-area">
+                            <img id="pkmn-img" class="pkmn-img" src="./img/pkball.webp" alt="Pokemon"> <br>
+                        </div>
+                        <div class="pkmn-arrow">
+                            <button onclick="changeSprite('right')">🢂</button>
+                        </div>
+                    </div>
+                    <div class="pkmn-genshi-params">
+                        <button id="pkmn-gen-btn" name="pkmn-gen-btn" class="pkmn-gen-btn" onclick="changeGender('default')">♂</button>
+                        <button id="pkmn-gen-btn" name="pkmn-gen-btn" class="pkmn-gen-btn" onclick="changeGender('female')">♀</button>
+                        <div class="pkmn-shiny-area">
+                            <input onclick="changeShiny()" type="checkbox" name="pkmn-shiny" id="pkmn-shiny"><label>Shiny</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="margin-collapse-separator">.</div>
+            <div id="stats-area" class="stats-area">
+                <!--This will be a "box" flex area with space for 2 in a row, resulting in 3 columns-->
+                <!--Or the flex-direction could be column, making 2 rows with wrap-around or w/e the setting is called.-->
+                <div class="stat-box">
+                    <div class="sb-title">
+                        <p>HP</p>
+                    </div>
+                    <div class="sb-number">
+                        <p>48</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="sb-title">
+                        <p>Attack</p>
+                    </div>
+                    <div class="sb-number">
+                        <p>48</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="sb-title">
+                        <p>Defense</p>
+                    </div>
+                    <div class="sb-number">
+                        <p>48</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="sb-title">
+                        <p>Special Attack</p>
+                    </div>
+                    <div class="sb-number">
+                        <p>48</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="sb-title">
+                        <p>Special Defense</p>
+                    </div>
+                    <div class="sb-number">
+                        <p>48</p>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="sb-title">
+                        <p>Speed</p>
+                    </div>
+                    <div class="sb-number">
+                        <p>48</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="margin-collapse-separator">.</div>
+        <div id="moves-area" class="moves-area">
+            <!--Just a flex including all moves-->
+            <div class="move-box">
+                <h3>Supersonic</h3>
+            </div>
+            <div class="move-box">
+                <h3>Growl</h3>
+            </div>
+            <div class="move-box">
+                <h3>Surf</h3>
+            </div>
+            <div class="move-box">
+                <h3>Bubble-Beam</h3>
+            </div>
+            <div class="move-box">
+                <h3>Supersonic</h3>
+            </div>
+            <div class="move-box">
+                <h3>Growl</h3>
+            </div>
+            <div class="move-box">
+                <h3>Surf</h3>
+            </div>
+            <div class="move-box">
+                <h3>Bubble-Beam</h3>
+            </div>
+        </div>        
+    </div>
+    <footer>
+        <script src="./js/pkdex.js"></script>
+    </footer>
+</body>
+</html>
